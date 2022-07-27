@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -17,20 +17,31 @@
       <p class="titulo-header">Jogo do desconto</p>
     </header>
     <main class="main-page">
-      <div class="popup"><p class="texto-popup">popup</p></div>
+      <div class="popup hide-popup">
+        <!-- <div class="popup"> -->
+            <p class="cabecalho-popup">Msg do Jogo</p>
+            <button class="fechar">x</button>
+            <div class="msg-popup">
+                
+            </div>
+            <button class="ok-popup">OK</button>
+        </div>
       <section class="section-desconto">
         <p class="texto-desconto">Desconto:</p>
-        <p class="numero-desconto">50%</p>
+        <div class="espaco-desconto">
+          <p class="valor-desconto">50</p>
+          <p class="numero-desconto">%</p>
+        </div>
       </section>
       <section class="section-jogo">
         <button class="button-sortear">Sortear palavra</button>
         <button class="button-informacao">i</button>
         <div class="espaco-palavra"></div>
-        <button class="button-letra button-letra-errada">Q</button>
-        <button class="button-letra button-letra-certa">W</button>
+        <button class="button-letra">Q</button>
+        <button class="button-letra">W</button>
         <button class="button-letra">E</button>
-        <button class="button-letra button-letra-errada">R</button>
-        <button class="button-letra button-letra-certa">T</button>
+        <button class="button-letra">R</button>
+        <button class="button-letra">T</button>
         <button class="button-letra">Y</button>
         <button class="button-letra">U</button>
         <button class="button-letra">I</button>
@@ -58,21 +69,15 @@
       <section class="section-dicas">
         <div class="div-dicas">
           <p class="titulo-dicas">Dica 1:</p>
-          <p class="texto-dicas">
-            Aqui você pode colocar sua dica com tranquilidade
-          </p>
+          <p class="texto-dicas"></p>
         </div>
         <div class="div-dicas">
           <p class="titulo-dicas">Dica 2:</p>
-          <p class="texto-dicas">
-            Aqui você pode colocar sua dica com tranquilidade
-          </p>
+          <p class="texto-dicas"></p>
         </div>
         <div class="div-dicas">
           <p class="titulo-dicas">Dica 3:</p>
-          <p class="texto-dicas">
-            Aqui você pode colocar sua dica com tranquilidade
-          </p>
+          <p class="texto-dicas"></p>
         </div>
       </section>
     </main>
