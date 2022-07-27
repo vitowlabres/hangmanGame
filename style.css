@@ -102,7 +102,7 @@ body {
   box-shadow: 2.5px 2.5px 2px 0px gray;
 }
 
-.button-informacao {
+.informacao {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,6 +120,50 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: large;
   font-style: italic;
+}
+
+.container-instrucoes {
+  display: none;
+  position: absolute;
+  color: white;
+  left: 865px;
+  top: 265px;
+  padding: 10px 10px 10px 40px;
+  background-color: black;
+  opacity: 0.85;
+  z-index: 100;
+  width: 250px;
+}
+
+.container-instrucoes hr {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.item-instrucoes {
+  left: 0px;
+  list-style-type: upper-roman;
+}
+
+.titulo-instrucao {
+  text-align: center;
+  font-weight: bold;
+}
+
+.class-hover {
+  /* background-color: black;
+  left: 20px;
+  top: 135px;
+  width: 250px; */
+  /* top: 17px; */
+  /* opacity: 0.85;
+  color: white; */
+  /* left: 41px; */
+  display: block;
+}
+
+.fundo-vermelho {
+  background-color: red;
 }
 
 .espaco-palavra {

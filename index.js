@@ -5,8 +5,8 @@ const msgPopup = document.querySelector('.msg-popup');
 const botaoFechar = document.querySelector('.fechar');
 const botaoOkPopup = document.querySelector('.ok-popup');
 const numeroDesconto = document.querySelector('.valor-desconto')
-const botaoInfo = document.querySelector('.button-informacao');
-// const instrucoes = document.querySelector('.container-instrucoes');
+const botaoInfo = document.querySelector('.informacao');
+const instrucoes = document.querySelector('.container-instrucoes');
 const botaoSortear = document.querySelector('.button-sortear');
 const botaoLetra = document.querySelector('.button-letra');
 const todosBotoesLetra = document.querySelectorAll('.button-letra');
@@ -222,6 +222,22 @@ botaoDica.addEventListener('click', function () {
     }
     
 });
+
+// evento disparado ao passar o mouse por cima do botão de instruções. Como resultado, mostra a lista de instruções e coloca o fundo vermelho do botão "instrucoes" 
+hover(botaoInfo, function () {
+    instrucoes.classList.add('class-hover');
+    botaoInfo.classList.add('fundo-vermelho');
+}, function () {
+    instrucoes.classList.remove('class-hover');
+    botaoInfo.classList.remove('fundo-vermelho');
+});
+
+
+// função responsável por mostrar as instruções ao passar o mouse ('mouseenter') no botão de "dúvida"
+function hover(elemento, enter, leave) {
+    elemento.addEventListener('mouseenter', enter)
+    elemento.addEventListener('mouseleave', leave)
+};
 
 //função responsável por mostrar o popup na tela
 function alertaPopup(msg) {

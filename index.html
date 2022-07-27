@@ -19,13 +19,11 @@
     <main class="main-page">
       <div class="popup hide-popup">
         <!-- <div class="popup"> -->
-            <p class="cabecalho-popup">Msg do Jogo</p>
-            <button class="fechar">x</button>
-            <div class="msg-popup">
-                
-            </div>
-            <button class="ok-popup">OK</button>
-        </div>
+        <p class="cabecalho-popup">Msg do Jogo</p>
+        <button class="fechar">x</button>
+        <div class="msg-popup"></div>
+        <button class="ok-popup">OK</button>
+      </div>
       <section class="section-desconto">
         <p class="texto-desconto">Desconto:</p>
         <div class="espaco-desconto">
@@ -35,7 +33,36 @@
       </section>
       <section class="section-jogo">
         <button class="button-sortear">Sortear palavra</button>
-        <button class="button-informacao">i</button>
+        <div class="informacao">i</div>
+        <div class="container-instrucoes">
+          <p class="titulo-instrucao">Bem vindo ao Jogo de Adivinhação!</p>
+          <hr />
+          <p class="subtitulo-instrucao">
+            O jogo funciona da seguinte maneira:
+          </p>
+          <ol class="lista-instrucoes">
+            <li class="item-instrucoes">
+              Você inicia o jogo com 50% de desconto;
+            </li>
+            <li class="item-instrucoes">
+              A cada letra errada, você perde 10% de desconto;
+            </li>
+            <li class="item-instrucoes">
+              Você tem direito a 3 dicas que podem ser solicitadas a partir do
+              botão "Solicitar dica";
+            </li>
+            <li class="item-instrucoes">
+              A cada dica selecionada, você perde 10% de desconto;
+            </li>
+            <li class="item-instrucoes">
+              Para iniciar, basta pressionar o botão "Sortear";
+            </li>
+            <li class="item-instrucoes">
+              Para selecionar a letra, basta escolher uma entre as disponíveis
+              no teclado.
+            </li>
+          </ol>
+        </div>
         <div class="espaco-palavra"></div>
         <button class="button-letra">Q</button>
         <button class="button-letra">W</button>
