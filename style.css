@@ -24,10 +24,13 @@ body {
 
 .main-page {
   display: grid;
-  grid-template-columns: auto auto auto auto;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   column-gap: 30px;
-  padding: 10vh 0 2vh 2vw;
-  height: 80vh;
+  padding: 10vh 2vw 2vh 2vw;
+  box-sizing: border-box;
+  height: 100vh;
 }
 
 .section-desconto {
@@ -37,14 +40,14 @@ body {
   align-items: center;
   grid-column: span 1;
   justify-self: center;
-  align-self: center;
+
   box-sizing: border-box;
   background: #818181;
   width: 300px;
   height: 300px;
   border: 2px solid #000000;
   border-radius: 50%;
-  margin-bottom: 10px;
+  margin-top: 100px;
 }
 
 .espaco-desconto {
@@ -67,25 +70,31 @@ body {
 }
 
 .section-jogo {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  /* display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(6, auto);
   column-gap: 15px;
-  row-gap: 15px;
-  box-sizing: border-box;
+  row-gap: 15px; */
   grid-column: span 2;
-  width: 535px;
-  height: 150px;
+  box-sizing: border-box;
+  width: 40vw;
+  height: 600px;
   justify-self: center;
 }
 
+/* @media screen and (min-width: 1700px) {
+  .section-jogo {
+    width
+  }
+} */
+
 .button-sortear {
-  grid-column: span 10;
-  grid-template-rows: span 1;
   align-self: center;
   justify-self: center;
   width: 271px;
-  height: 82px;
+  height: 100px;
   border: 0.5px solid dimgray;
   border-radius: 30px;
   box-shadow: 4px 4px 4px dimgray;
@@ -104,35 +113,43 @@ body {
 
 .informacao {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.button-informacao {
+  display: flex;
   justify-content: center;
-  grid-column: span 10;
-  grid-row: span 1;
-  background-color: #325d9d;
-  width: 25px;
-  height: 25px;
-  border: none;
+  align-items: center;
+  align-self: flex-start;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
-  align-self: flex-end;
-  justify-self: flex-end;
-  margin-top: 20px;
-  color: #ffffff;
-  font-family: "Courier New", Courier, monospace;
-  font-size: large;
-  font-style: italic;
+  background: #325d9d;
+  color: white;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  margin: 20px 0px 5px 10px;
+  border: none;
 }
 
 .container-instrucoes {
   display: none;
+  /* display: flex;
+  flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
   position: absolute;
   color: white;
-  left: 865px;
-  top: 265px;
-  padding: 10px 10px 10px 40px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  /* justify-self: center; */
+  margin: 30px 0px 0px 20px;
+  padding: 10px 25px 10px 55px;
   background-color: black;
-  opacity: 0.85;
   z-index: 100;
-  width: 250px;
+  width: 500px;
+  opacity: 0.9;
 }
 
 .container-instrucoes hr {
@@ -143,23 +160,23 @@ body {
 .item-instrucoes {
   left: 0px;
   list-style-type: upper-roman;
+  margin-bottom: 5px;
 }
 
 .titulo-instrucao {
+  border-bottom: 1px solid white;
+  margin-bottom: 15px;
   text-align: center;
   font-weight: bold;
 }
 
+.subtitulo-instrucao {
+  padding-bottom: 15px;
+}
+
 .class-hover {
-  /* background-color: black;
-  left: 20px;
-  top: 135px;
-  width: 250px; */
-  /* top: 17px; */
-  /* opacity: 0.85;
-  color: white; */
-  /* left: 41px; */
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .fundo-vermelho {
@@ -171,12 +188,14 @@ body {
   justify-content: center;
   align-items: flex-end;
   background: lightgrey;
-  grid-column: span 10;
   padding: 10px;
   height: 20vh;
   border-radius: 10px;
   border: 3px solid gray;
   margin: 1px 0 20px;
+  width: 40vw;
+  justify-self: center;
+  align-self: center;
 }
 
 .dashes {
@@ -188,11 +207,26 @@ body {
   height: 15px;
 }
 
+.teclado {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  /* column-gap: 1.15vw;
+  row-gap: 1.15vw; */
+  /* padding-right: 10vw;
+  padding-left: 10vw; */
+  width: 40vw;
+  height: calc(50vw * 0.25);
+  padding: 0;
+  justify-self: center;
+  align-self: center;
+}
+
 .button-letra {
-  width: 40px;
-  height: 40px;
   grid-column: span 1;
   grid-row: span 1;
+  width: 3.08vw;
+  height: 3.08vw;
   align-self: flex-start;
   justify-self: center;
   border-radius: 20%;
@@ -202,6 +236,7 @@ body {
   font-weight: bolder;
   color: #000000;
   margin: 0;
+  box-sizing: border-box;
 }
 
 .button-letra:hover {
@@ -219,29 +254,22 @@ body {
 
 .button-dica {
   grid-column: span 3;
-  grid-template-rows: span 1;
-  align-self: flex-end;
-  justify-self: flex-end;
-  width: 60px;
-  height: 60px;
-  margin: 10px 5px 0 0;
-  border: 0.5px solid dimgray;
-  border-radius: 100px;
-  box-shadow: 4px 4px 4px dimgray;
-  background: #818181;
-  color: #ffffff;
+  grid-row: span 1;
+  align-self: flex-start;
+  justify-self: center;
+  height: 3.08vw;
+  width: 11.1vw;
+  border-radius: 7px;
+  border: 0.3px solid gray;
+  box-shadow: 4px 4px 2px 1px gray;
   font-family: "Montserrat", sans-serif;
   font-size: 12px;
   font-weight: bold;
-  text-shadow: 3px 3px 3px dimgray;
 }
 
 .button-dica:hover {
-  transition: 0.08s;
+  transition: 0.05s;
   box-shadow: 2.5px 2.5px 2px 0px gray;
-  color: #818181;
-  background: #ffffff;
-  text-shadow: none;
 }
 
 .section-dicas {
@@ -249,7 +277,6 @@ body {
   flex-direction: column;
   gap: 20px;
   grid-column: span 1;
-  width: 500px;
 }
 
 .div-dicas {
@@ -257,13 +284,13 @@ body {
   margin: 0 0 20px 0;
   box-sizing: border-box;
   padding: 15px;
-  border-radius: 20px 0% 0% 20px;
-  width: 500px;
+  border-radius: 20px;
+  width: 300px;
   height: 120px;
   font-family: "Montserrat", sans-serif;
   box-shadow: 4px 4px 2px 1px lightgray;
   border: 0.8px solid dimgray;
-  align-self: flex-end;
+  align-self: center;
 }
 
 .titulo-dicas {
