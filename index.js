@@ -200,7 +200,7 @@ botaoDica.addEventListener('click', function () {
             } else {
                 // variável de apoio para que não sejam preenchidas todas as dicas de uma vez só
                 var dicaOk = false;
-//PAREI AQUI, VER O QUE É ESSA LISTA DICAS NO ARQUIVO MAIS RECENTE.                
+                
                 // percorre os campos destinados às dicas. A dica é inserida caso esteja vazia
                 listaDicas.forEach(function (elemento, index) {
                     if (elemento.innerHTML == '' && dicaOk == false) {
