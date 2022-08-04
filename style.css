@@ -5,6 +5,8 @@
 
 body {
   background: #cbcbcb;
+  width: 100%;
+  height: 100%;
 }
 
 .header {
@@ -53,6 +55,7 @@ body {
 
     padding: 0 2vw 2vh 2vw;
     height: 100%;
+    width: 100%;
   }
 }
 
@@ -153,12 +156,12 @@ body {
 @media screen and (max-width: 900px) {
   .button-sortear {
     width: 30vw;
-    height: 30%;
+    height: 80%;
     font-size: 100%;
     grid-area: button-sortear;
     align-self: center;
     justify-self: center;
-    margin: 2vh 7vw 0 0;
+    margin: 50px 7vw 0 0;
   }
 }
 
@@ -481,7 +484,25 @@ body {
   background-color: #357ec7;
   z-index: 900;
   border: 1px solid black;
-  border-radius: 10px 10px 0 0;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 900px){
+  .popup {
+    position: absolute;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 20vh;
+    width: 50vw;
+    background-color: #357ec7;
+    z-index: 900;
+    border: 1px solid black;
+    border-radius: 10px;
+  } 
 }
 
 .cabecalho-popup {
@@ -498,8 +519,8 @@ body {
   background-color: lightgray;
   margin: 0 auto;
   margin-top: 1em;
-  width: 95%;
-  height: 80%;
+  width: 90%;
+  height: 75%;
   margin-bottom: 10px;
 }
 
@@ -535,6 +556,13 @@ body {
   left: 50%;
   transform: translateX(-50%);
   cursor: pointer;
+  margin-bottom: 25px;
+}
+
+@media screen and (max-width: 900px){
+  .ok-popup{
+    margin-bottom: 5px;
+  }
 }
 
 .hide-popup {
